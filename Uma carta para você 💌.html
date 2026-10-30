@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Uma carta para você 💌</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Lora:ital@0;1&display=swap">
+<style>
+:root{--bg1:#fff1f3;--bg2:#ffd6df;--paper:#fffaf5;--ink:#4a2b33;--accent:#c2185b;--gold:#b8860b;--shadow:rgba(120,30,60,.25);
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg1:#2a0f1c;--bg2:#12060d;--paper:#2f1822;--ink:#f6dfe5;--accent:#ff6b9a;--gold:#e6c36a;--shadow:rgba(0,0,0,.6)}}
+:root[data-theme="dark"]{--bg1:#2a0f1c;--bg2:#12060d;--paper:#2f1822;--ink:#f6dfe5;--accent:#ff6b9a;--gold:#e6c36a;--shadow:rgba(0,0,0,.6)}
+*{box-sizing:border-box}
+html,body{margin:0;min-height:100%}
+body{background:radial-gradient(circle at 50% 20%,var(--bg1),var(--bg2));color:var(--ink);font-family:'Lora',Georgia,serif;overflow-x:hidden;min-height:100vh}
+#hearts{position:fixed;inset:0;pointer-events:none;overflow:hidden;z-index:0}
+.h{position:absolute;bottom:-40px;opacity:0;animation:up linear forwards}
+@keyframes up{0%{opacity:0;transform:translateY(0) rotate(0)}10%{opacity:.8}100%{opacity:0;transform:translateY(-110vh) rotate(40deg)}}
+main{position:relative;z-index:1;display:flex;flex-direction:column;align-items:center;padding:28px 16px 60px}
+#stage{min-height:80vh;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;gap:18px}
+#stage h1{font-family:'Great Vibes',cursive,serif;font-weight:400;font-size:clamp(2.4rem,9vw,3.6rem);color:var(--accent);margin:0;animation:pulse 2.5s ease-in-out infinite}
+@keyframes pulse{50%{transform:scale(1.05)}}
+.env{position:relative;width:min(300px,80vw);height:200px;cursor:pointer;filter:drop-shadow(0 12px 18px var(--shadow));transition:transform .3s;animation:float 3s ease-in-out infinite}
+@keyframes float{50%{transform:translateY(-10px)}}
+.env:hover{transform:scale(1.04)}
+.env .body{position:absolute;inset:0;background:linear-gradient(135deg,#f8a5b8,#e86a8e);border-radius:8px}
+.env .flap{position:absolute;left:0;right:0;top:0;height:110px;background:linear-gradient(#f48fa8,#d9577f);clip-path:polygon(0 0,100% 0,50% 100%);transform-origin:top;transition:transform .8s}
+.env .seal{position:absolute;left:50%;top:84px;transform:translateX(-50%);font-size:2rem;z-index:2;transition:opacity .4s}
+.env.open .flap{transform:rotateX(180deg)}
+.env.open .seal{opacity:0}
+.hint{font-style:italic;opacity:.8}
+#letter{display:none;width:min(640px,100%);background:var(--paper);border-radius:14px;padding:clamp(24px,6vw,48px);box-shadow:0 20px 50px var(--shadow);border:1px solid color-mix(in srgb,var(--gold) 40%,transparent);position:relative;animation:rise 1s ease-out}
+@keyframes rise{from{opacity:0;transform:translateY(40px) scale(.96)}}
+#letter .t{font-family:'Great Vibes',cursive,serif;font-size:clamp(2rem,7vw,2.8rem);color:var(--accent);margin:0 0 16px}
+#letter p{line-height:1.85;font-size:clamp(1rem,3.6vw,1.12rem);margin:0 0 18px;opacity:0;transform:translateY(14px);transition:opacity 1.2s,transform 1.2s}
+#letter p.show{opacity:1;transform:none}
+.sign{text-align:right;font-family:'Great Vibes',cursive,serif;font-size:clamp(1.6rem,6vw,2.2rem);color:var(--accent)}
+.big{text-align:center;font-weight:600;color:var(--accent);letter-spacing:.02em}
+.beat{display:block;text-align:center;font-size:2.6rem;animation:beat 1.2s infinite;opacity:0;transition:opacity 1.5s}
+.beat.show{opacity:1}
+@keyframes beat{0%,100%{transform:scale(1)}15%{transform:scale(1.25)}30%{transform:scale(1)}45%{transform:scale(1.18)}}
+</style>
+</head>
+<body>
+<div id="hearts"></div>
+<main>
+<section id="stage">
+<h1>Para a mulher da minha vida</h1>
+<div class="env" id="env" role="button" tabindex="0" aria-label="Abrir carta"><div class="body"></div><div class="flap"></div><div class="seal">❤️</div></div>
+<div class="hint" id="hint">Toque no envelope para abrir 💌</div>
+</section>
+<article id="letter">
+<h2 class="t">Boa noite, meu amor</h2>
+<p>Mesmo cansado, vim fazer esta carta para você, minha princesa. Primeiramente, quero agradecer a Deus por ter você em minha vida.</p>
+<p>Você se tornou a mulher da minha vida: linda, charmosa, inteligente, alegre, atenciosa, princesa e tesuda kkk 😏</p>
+<p>Minha princesa, eu te amo muito mesmo e estou pronto para viver casado com você para o resto de nossas vidas. Você é uma das melhores coisas que aconteceram na minha vida, meu amor.</p>
+<p>Sei que não sou muito bom com textos, mas saiba que, cansado ou não, triste ou alegre, vou estar sempre ao seu lado para o que você precisar. Quero ser o seu porto seguro, onde você pode ter certeza de que estarei presente para resolvermos os B.O.s da sua vida junto com você.</p>
+<p class="big">Mais uma vez: eu, RAFAEL DA SILVA TEIXEIRA, te amo para o resto da sua vida.</p>
+<span class="beat" id="beat">💖</span>
+<p class="sign">Com todo o meu amor, Rafael</p>
+</article>
+</main>
+<script>
+(function(){
+var box=document.getElementById('hearts'),em=['❤️','💖','💕','🌹','✨'];
+function spawn(){var s=document.createElement('span');s.className='h';s.textContent=em[Math.floor(Math.random()*em.length)];
+s.style.left=Math.random()*100+'%';s.style.fontSize=(14+Math.random()*22)+'px';
+var d=6+Math.random()*7;s.style.animationDuration=d+'s';box.appendChild(s);setTimeout(function(){s.remove()},d*1000)}
+setInterval(spawn,500);for(var i=0;i<6;i++)setTimeout(spawn,i*200);
+var env=document.getElementById('env'),opened=false;
+function open(){if(opened)return;opened=true;env.classList.add('open');
+document.getElementById('hint').style.display='none';
+for(var i=0;i<14;i++)setTimeout(spawn,i*60);
+setTimeout(function(){
+document.getElementById('stage').style.display='none';
+var l=document.getElementById('letter');l.style.display='block';window.scrollTo(0,0);
+var items=l.querySelectorAll('p,.beat');
+items.forEach(function(p,i){setTimeout(function(){p.classList.add('show');if(i>0)p.scrollIntoView({behavior:'smooth',block:'center'})},900+i*2200)});
+},1000)}
+env.addEventListener('click',open);
+env.addEventListener('keydown',function(e){if(e.key==='Enter'||e.key===' ')open()});
+})();
+</script>
+</body>
+</html>
